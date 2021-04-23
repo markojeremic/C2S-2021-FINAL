@@ -137,6 +137,76 @@ img {
   justify-content: space-around;
   align-items: center;
 }
+
+#popUpRadionica {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background: #fefefe;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  backdrop-filter: blur(150px);
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+#popUpRadionica2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background: #fefefe;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  backdrop-filter: blur(150px);
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+/* Modal Content/Box */
+.popupRadionica-content {
+  background-color: #fefefe;
+  margin: 1rem auto; /* 15% from the top and centered */
+  padding: 1rem;
+  font-family: Roboto;
+  font-weight: 300;
+  width: 80%;
+  font-size: 24px; /* Could be more or less, depending on screen size */
+}
+
+.popupRadionica-content h3 {
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+
+/* The Close Button */
+.close1, .close2 {
+  color: #aaa;
+  float: right;
+  position: absolute;
+  right: 12px;
+  top: 5px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close1:hover,
+.close1:focus, .close2:hover,
+.close2:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /*--------------------------------Radionica2------------------------------------------------*/
 #radionica1,
 #radionica2 {
@@ -252,6 +322,7 @@ img {
   grid-template-areas: "h2 txt txt txt txt txt txt txt txt txt txt txt txt txt txt txt txt";
   grid-gap: 0%;
   margin-bottom: 2%;
+  padding-bottom: 100px;
 }
 #titlePanel {
   font-family: Roboto;
@@ -276,12 +347,62 @@ img {
   grid-area: txt;
 }
 
+
+#btnPanel {
+  height: 50px;
+  width: 100px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin: 10px;
+  right: 5px;
+  bottom: 1px;
+}
+
+#panelDiskusijaPopup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: -1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background: #fefefe;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  backdrop-filter: blur(150px);
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+/* Modal Content/Box */
+.panelDiskusijaPopup-content {
+  background-color: #fefefe;
+  margin: 1rem auto; /* 15% from the top and centered */
+  padding: 1rem;
+  font-family: Roboto;
+  font-weight: 300;
+  width: 80%;
+  font-size: 24px; /* Could be more or less, depending on screen size */
+}
+
+.panelDiskusijaPopup-content h3 {
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+
 .swiper-panel {
   position: relative;
   overflow: hidden;
   width: 312px;
   height: 20% !important;
   margin: auto;
+  display: none;
 }
 @media (max-width: 420px) {
   .swiper-panel {
@@ -645,7 +766,7 @@ img {
   font-style: normal;
   font-weight: 900;
   font-size: 60px;
-  line-height: 94px;
+  line-height: 40px;
   text-align: center;
   color: #ffffff;
   text-shadow: 8px -8px 10px rgba(0, 0, 0, 0.07),
@@ -671,8 +792,8 @@ img {
   width: 60%;
   left: 20%;
   right: 20%;
-  margin-top: 1.5rem;
-  padding: 1rem;
+  margin-top: 2rem;
+  padding: 0.75rem;
   font-family: Roboto;
   color: #ffffff;
   font-weight: 300;
@@ -759,8 +880,8 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 150px !important;
-  height: 261px !important;
+  width: 200px !important;
+  height: 100px !important;
 }
 .swiper-generalni .swiper-wrapper {
   position: relative;
@@ -772,8 +893,8 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 292px !important;
-  height: 261px !important;
+  width: 250px !important;
+  height: 120px !important;
 }
 .swiper-naturalni {
   position: relative;
@@ -1965,7 +2086,7 @@ button:hover {
   .o-projektu-wrapper {
     min-width: initial;
     width: 96% !important;
-    max-height: 90%;
+    max-height: 99%;
     left: 50%;
     transform: translateX(-50%);
     top: 2%;

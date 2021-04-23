@@ -35,7 +35,7 @@
                 <h1>break your lim<span style="color: #cc1f38">it</span>s</h1>
               </div>
               <div class="button-wrapper">
-                <button class="prijava">prijavi se</button>
+                <button class="prijava" onclick="window.location.href='application.php'">prijavi se</button>
               </div>
             </div>
           </section>
@@ -55,7 +55,7 @@
               </div>
               <div class="text">
                 <p>
-                  Kompanije studentima je projekat Udruženja studenata
+                  <b>Kompanije studentima</b> je projekat Udruženja studenata
                   informatike FONIS koji za cilj ima prenošenje znanja i
                   povezivanje studenata sa IT kompanijama. Ove godine će
                   doživeti izdanje obojeno novim bojama, obogaćen sadržajem
@@ -66,7 +66,7 @@
                   radionica i speed dating-a i traje od 10. do 14. maja.
                 </p>
                 <p>
-                  Generalni pokrovitelj projekta je kompanija Levi9 koja će
+                  Generalni pokrovitelj projekta je kompanija <b>Levi9</b> koja će
                   studentima predstaviti svoje poslovanje, koje tehnologije
                   koriste u svom radu, ali i na koji način teže da okupe
                   najtalentovanije profesionalce i omoguće im da se
@@ -120,7 +120,21 @@
                 pripremite za hands on iskustvo!
               </div>
               <div class="buttonsR1">
-                <button id="btn1R1">Saznaj više</button>
+                <button id="btn1R1" >Saznaj više</button>
+              </div>
+              <div id="popUpRadionica">
+
+                <!-- Modal content -->
+                <div class="popupRadionica-content">
+                  <h3 id="naslovPredavac">O predavaču:</h3>
+                  <p id = "tekstPredavac">Marina Stupar radi u kompaniji Levi9 od 2015. godine. Nakon završenih master studija na Prirodno-matematičkom fakultetu 
+                    u Novom Sadu, konkurisala je za poziciju Test Developer-a. 
+                    Nedavno je obeležila svoj prvi jubilej od 5 godina rada u Levi9. 
+                    Svoje znanje i iskustvo u testiranju softvera je stekla radom na različitim projektima, 
+                    koji su uključivali razvoj finansijskih, crypto-currency i advertising aplikacija.</p>
+                </div>
+                <span class="close1">&times;</span>
+              
               </div>
             </div>
           </section>
@@ -168,7 +182,23 @@
                 6.
               </div>
               <div class="buttonsR2">
-                <button id="btn1R2">Saznaj više</button>
+                <button id="btn1R2">Saznaj više</button>                
+              </div>
+              <div id="popUpRadionica2">
+
+                <!-- Modal content -->
+                <div class="popupRadionica-content">
+                  <h3 id = "naslovPredavac2">O predavaču:</h3>
+                  <p id = "tekstPredavac2">Sofija Bojić je sa radom počela tokom studija 2015. godine. 
+                    Radila je na razvijanju i održavanju projekata za banke, berze, radio i TV. 
+                    Trenutno je zaposlena u kompaniji Levi9 na poziciji Senior JavaScript developer-a. 
+                    Mentor je na masterclass programu u kompaniji Levi9. Učestovala je i kao predavač u okviru Levi9 predmeta 
+                    na Matematičkom fakultetu, a tokom svih godina je radila i na frontend-u i na backend-u. 
+                    Neke od tehnologija koje trenutno koristi su: JavaScript, React, Next.js, Node i AWS.
+                  </p>
+                </div>
+                <span class="close2">&times;</span>
+              
               </div>
             </div>
           </section>
@@ -198,6 +228,8 @@
                 u Levi9 prijavite se za panel diskusiju i otkrijte nove
                 puteve!
               </div>
+                <button id="btnPanel">Saznaj više...</button>                
+
             </div>
             <div class="swiper-panel">
               <div class="swiper-wrapper">
@@ -486,14 +518,10 @@
               <img src="img/levi9.png" alt="" />
             </div>
             <div class="levi9-container">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Debitis, amet nisi ipsum sapiente sed placeat perferendis qui
-              magni corporis culpa, dolores ducimus deleniti. Exercitationem
-              ducimus nam, eos nobis doloribus. Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Iste aliquam recusandae soluta,
-              quasi vero ab consequuntur mollitia laudantium at! Corporis
-              minus harum consectetur quo nemo laudantium perferendis enim,
-              accusantium labore.
+              <b>Levi9</b> je servisna kompanija koja pruža usluge razvoja, implementacije, održavanja i testiranja softvera međunarodnim klijentima. 
+              Kancelarije u Beogradu, Novom Sadu i Zrenjaninu baza su za više od 600 Najnera u Srbiji, dok je HQ u Amsterdamu.
+              Ako treba da izdvojite samo jednu stvar koja je krucijalna za vašu motivaciju u učenju i radu, šta bi to bilo? 
+              Kladimo se da je već na listi od 999 razloga zašto je dobro biti deo <b>Levi9</b>!
             </div>
           </section>
         </div>
@@ -516,79 +544,84 @@
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="general-logo" style="
-                            background-image: url('./img/team/Aleksandra_sivo-01.jpeg');
+                            background-image: url('./img/godisnji/catena.png');
                           "></div>
                     </div>
                     <div class="swiper-slide">
                       <div class="general-logo" style="
-                            background-image: url('./img/team/Aleksandra_sivo-01.jpeg');
+                            background-image: url('./img/godisnji/comtrade.png');
                           "></div>
                     </div>
                     <div class="swiper-slide">
                       <div class="general-logo" style="
-                            background-image: url('./img/team/Aleksandra_sivo-01.jpeg');
+                            background-image: url('./img/godisnji/fon.png');
                           "></div>
                     </div>
                     <div class="swiper-slide">
                       <div class="general-logo" style="
-                            background-image: url('./img/team/Aleksandra_sivo-01.jpeg');
+                            background-image: url('./img/godisnji/guarana.png');
                           "></div>
                     </div>
                     <div class="swiper-slide">
                       <div class="general-logo" style="
-                            background-image: url('./img/team/Aleksandra_sivo-01.jpeg');
-                          "></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="general-logo" style="
-                            background-image: url('./img/team/Aleksandra_sivo-01.jpeg');
-                          "></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="general-logo" style="
-                            background-image: url('./img/team/Aleksandra_sivo-01.jpeg');
+                            background-image: url('./img/godisnji/rajfazen.png');
                           "></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <h3>MEDIJSKI PARTNERI</h3>
+              <h3>NATURALNI PARTNERI</h3>
               <div class="bar-partneri">
                 <div class="swiper-medijski">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="general-logo" style="
-                            background-image: url('./img/team/Aleksandra_sivo-01.jpeg');
+                            background-image: url('./img/naturalni/bracaBugi.png');
                           "></div>
                     </div>
                     <div class="swiper-slide">
                       <div class="general-logo" style="
-                            background-image: url('./img/team/Aleksandra_sivo-01.jpeg');
+                            background-image: url('./img/naturalni/coloseum.png');
                           "></div>
                     </div>
                     <div class="swiper-slide">
                       <div class="general-logo" style="
-                            background-image: url('./img/team/Aleksandra_sivo-01.jpeg');
+                            background-image: url('./img/naturalni/escapeGame.png');
                           "></div>
                     </div>
                     <div class="swiper-slide">
                       <div class="general-logo" style="
-                            background-image: url('./img/team/Aleksandra_sivo-01.jpeg');
+                            background-image: url('./img/naturalni/fenjerko.png');
                           "></div>
                     </div>
                     <div class="swiper-slide">
                       <div class="general-logo" style="
-                            background-image: url('./img/team/Aleksandra_sivo-01.jpeg');
+                            background-image: url('./img/naturalni/heaven.png');
                           "></div>
                     </div>
                     <div class="swiper-slide">
                       <div class="general-logo" style="
-                            background-image: url('./img/team/Aleksandra_sivo-01.jpeg');
+                            background-image: url('./img/naturalni/inCentar.png');
                           "></div>
                     </div>
                     <div class="swiper-slide">
                       <div class="general-logo" style="
-                            background-image: url('./img/team/Aleksandra_sivo-01.jpeg');
+                            background-image: url('./img/naturalni/jcr.png');
+                          "></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="general-logo" style="
+                            background-image: url('./img/naturalni/krojaceva.png');
+                          "></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="general-logo" style="
+                            background-image: url('./img/naturalni/nauciDizajn.png');
+                          "></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="general-logo" style="
+                            background-image: url('./img/naturalni/znamKo.png');
                           "></div>
                     </div>
                   </div>
