@@ -214,6 +214,9 @@ img {
   min-height: 100vh;
   background-size: cover;
 }
+#radionica2{
+  background: url(./img/radionica2.png);
+}
 .containerR2 {
   min-height: 80vh;
   position: absolute;
