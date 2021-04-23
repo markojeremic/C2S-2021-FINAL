@@ -1,4 +1,6 @@
 (() => {
+
+  let clicked = false
   let active = false
   let hasActive = false
   let navbarActive = false
@@ -76,10 +78,13 @@ btn2.onclick = function() {
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
+  clicked = true;
+
 }
 
 span2.onclick = function() {
   modal2.style.display = "none";
+  clicked = true;
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -92,9 +97,6 @@ window.onclick = function(event) {
     modal2.style.display = "none";
   }
 
-  if (event.target == modal3) {
-    modal3.style.display = "none";
-  }
 }
 
 
@@ -467,16 +469,24 @@ window.onclick = function(event) {
   
   function startTyping(textId, speed) {
     setTimeout(addNextLetterToTextBox, speed);
-    var text = $('#'+textId).html().replace(/\s+/g, ' ').trim();
+    let text = $('#'+textId).html().replace(/\s+/g, ' ').trim();
     var i = 0;
     $('#'+textId).text("");
 
     function addNextLetterToTextBox() {
-      if (i < text.length) {
+
+      console.log(clicked)
+
+      if (!clicked && i < text.length) {
+
         $('#'+textId).append(text[i]);
         i += 1;
         setTimeout(addNextLetterToTextBox, speed);
       }
+      if (clicked) {
+        $('#'+textId).html(text);
+      }
+      clicked = false;
     }
   }
 })()

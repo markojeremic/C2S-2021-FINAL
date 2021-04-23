@@ -73,14 +73,12 @@
         <div class="prijava-radionice" style = "display:flex;">
             <div style="margin:20px;">
             <input type="checkbox" id="radionica1" name="radionica1" value="da"  onclick="myFunction(this.id)">
-            <label for="radionica1"> Radionica 1</label><br>
-            <p>Lorem ipsum dolor sit ametbr consectetur adipisicing elit. Quidem</p>
+            <label for="radionica1"> Software Testing</label><br>
             </div>
             
             <div style="margin:20px;">
             <input type="checkbox" id="radionica2" name="radionica2" value="da"  onclick="myFunction(this.id)">
-            <label for="radionica2">Radionica2</label><br>
-            <p>Lorem ipsum dolor sit ametbr consectetur adipisicing elit. Quidem, enim.</p>
+            <label for="radionica2">Advanced JavaScript and React</label><br>
             </div>
         
         </div>
@@ -143,8 +141,12 @@ body{
     background: url("img/pozadinaprijava.jpg")no-repeat fixed ;
     background-size: cover;
     color: white;
- 
+    margin: 0;
+    padding: 0;
+
 }
+
+
 
 textarea{
     resize: none;
@@ -168,8 +170,7 @@ textarea{
   margin: 1rem auto;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.125);
   padding: 0.5rem;
-  font-family: Roboto;
-  font-weight: 300;
+
 }
 
 .prijava-wrapper .form  {
@@ -291,8 +292,29 @@ textarea{
         width: 100%;
     }
 
-    .sacuvaj-prijava {
-        margin-top: 1rem;
+.sacuvaj-prijava {
+    margin-top: 1rem;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #fff;
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  border-radius: 1rem;
+  letter-spacing: 0.1rem;
+  padding: 1rem 2rem 1rem 2rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
+    -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+.sacuvaj-prijava:hover {
+  transform: scale(1.05) translateY(-0.5rem);
     }
 
     .errorhandle{
