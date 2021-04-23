@@ -138,8 +138,8 @@ img {
   align-items: center;
 }
 /*--------------------------------Radionica2------------------------------------------------*/
-
-#radionice {
+#radionica1,
+#radionica2 {
   background: url(./img/Radionice_compressed.png);
   min-height: 100vh;
   background-size: cover;
@@ -250,7 +250,7 @@ img {
   padding: 2%;
   display: grid;
   grid-template-areas: "h2 txt txt txt txt txt txt txt txt txt txt txt txt txt txt txt txt";
-  grid-gap: 2%;
+  grid-gap: 0%;
   margin-bottom: 2%;
 }
 #titlePanel {
@@ -282,6 +282,25 @@ img {
   width: 312px;
   height: 20% !important;
   margin: auto;
+}
+@media (max-width: 420px) {
+  .swiper-panel {
+    height: 200px !important;
+    width: 300px;
+  }
+  .swiper-panel .swiper-slide {
+    width: 100px !important;
+    height: 200px;
+  }
+
+  .swiper-panel .swiper-slide .team-card {
+    height: 100%;
+  }
+
+  .swiper-panel .swiper-slide .team-card .team-card-img {
+    width: 100% !important;
+    height: 50px !important;
+  }
 }
 
 .swiper-panel .swiper-wrapper {
