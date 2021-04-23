@@ -189,7 +189,8 @@ img {
 }
 
 /* The Close Button */
-.close1, .close2 {
+.close1,
+.close2 {
   color: #aaa;
   float: right;
   position: absolute;
@@ -200,7 +201,8 @@ img {
 }
 
 .close1:hover,
-.close1:focus, .close2:hover,
+.close1:focus,
+.close2:hover,
 .close2:focus {
   color: black;
   text-decoration: none;
@@ -214,7 +216,7 @@ img {
   min-height: 100vh;
   background-size: cover;
 }
-#radionica2{
+#radionica2 {
   background: url(./img/radionica2.png);
 }
 .containerR2 {
@@ -349,7 +351,6 @@ img {
   color: rgba(255, 255, 255, 0.8);
   grid-area: txt;
 }
-
 
 #btnPanel {
   height: 50px;
@@ -1217,6 +1218,27 @@ img {
   }
 }
 @media (max-width: 560px) {
+  #textSpeed {
+    font-size: 0.9rem !important;
+    margin-bottom: 10% !important;
+  }
+  #textPanel {
+    font-size: 0.9rem !important;
+  }
+
+  .speedDating {
+    height: 200px !important;
+    margin-top: 5%;
+  }
+  .panelDiskusija {
+    height: 320px !important;
+  }
+  #btnPanel {
+    width: 40%;
+    font-size: 1rem;
+    right: 2%;
+  }
+
   #titleR1,
   #titleR2 {
     font-size: 2.5rem;
@@ -1450,6 +1472,13 @@ img {
   .buttonsR2 {
     display: flex;
     justify-content: space-around;
+  }
+  #textPanel,
+  #textSpeed {
+    font-size: 0.8rem !important;
+  }
+  .panelDiskusija {
+    height: 290px !important;
   }
   #btn1R1,
   #btn1R2 {
