@@ -71,16 +71,18 @@
   // Get the modal
   var modal = document.getElementById("popUpRadionica");
   var modal2 = document.getElementById("popUpRadionica2");
-  //var modal3 = document.getElementById("panelDiskusijaPopup");
+  //var modal3 = document.getElementById("popUpPanel");
 
   // Get the button that opens the modal
   var btn = document.getElementById("btn1R1");
   var btn2 = document.getElementById("btn1R2");
+  //var btn3 = document.getElementById("btnPanel");
 
 
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close1")[0];
   var span2 = document.getElementsByClassName("close2")[0];
+ // var span3 = document.getElementsByClassName("close3")[0];
 
 
   // When the user clicks on the button, open the modal
@@ -97,6 +99,10 @@
 
   }
 
+ // btn3.onclick = function () {
+ //   modal3.style.display = "flex";
+ // }
+//
   // When the user clicks on <span> (x), close the modal
   span.onclick = function () {
     modal.style.display = "none";
@@ -109,6 +115,11 @@
     clicked = true;
   }
 
+ // span3.onclick = function () {
+ //   modal3.style.display = "none";
+ //   clicked = true;
+ // }
+
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event) {
     if (event.target == modal) {
@@ -118,6 +129,10 @@
     if (event.target == modal2) {
       modal2.style.display = "none";
     }
+
+   // if (event.target == modal3) {
+      //modal3.style.display = "none";
+    //}
 
   }
 
@@ -356,18 +371,13 @@
       'transform',
       `translateY(${100 * swiper.activeIndex}vh)`
     )
-    toggleNavigation();
-
-
-
-    if (!navbarActive && active) {
-      console.log(active);
-      let currentlyActiveWrapper;
-      let currentlyActiveSection;
-
-      currentlyActiveWrapper = $('body').find('.should-change')
-      currentlyActiveSection = currentlyActiveWrapper.find('.main')
-
+  toggleNavigation();
+  if (!navbarActive && active) {
+    console.log(active);
+    let currentlyActiveWrapper;
+    let currentlyActiveSection;
+    currentlyActiveWrapper = $('body').find('.should-change')
+    currentlyActiveSection = currentlyActiveWrapper.find('.main')
       currentlyActiveSection.html(active)
     }
   })
