@@ -40,64 +40,86 @@
     centeredSlides: true,
     grabCursor: true,
   })
-  
+
+  //Carousel radionica JS
+
+  const r2 = new Swiper('.swiper-r2', {
+    speed: 2000,
+    spaceBetween: 50,
+    initialSlide: 2,
+    autoHeight: false,
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    loopedSlides: 0,
+
+    effect: 'slide',
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    grabCursor: true,
+  })
+
 
   // Tim
 
   // PopUp prozor
 
   // Get the modal
-var modal = document.getElementById("popUpRadionica");
-var modal2 = document.getElementById("popUpRadionica2");
-//var modal3 = document.getElementById("panelDiskusijaPopup");
+  var modal = document.getElementById("popUpRadionica");
+  var modal2 = document.getElementById("popUpRadionica2");
+  //var modal3 = document.getElementById("panelDiskusijaPopup");
 
-// Get the button that opens the modal
-var btn = document.getElementById("btn1R1");
-var btn2 = document.getElementById("btn1R2");
-
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close1")[0];
-var span2 = document.getElementsByClassName("close2")[0];
+  // Get the button that opens the modal
+  var btn = document.getElementById("btn1R1");
+  var btn2 = document.getElementById("btn1R2");
 
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-  startTyping('naslovPredavac',100)
-  startTyping('tekstPredavac',20)
-}
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close1")[0];
+  var span2 = document.getElementsByClassName("close2")[0];
 
-btn2.onclick = function() {
-  modal2.style.display = "block";
-  startTyping('naslovPredavac2',100)
-  startTyping('tekstPredavac2',20)
 
-}
+  // When the user clicks on the button, open the modal
+  btn.onclick = function () {
+    modal.style.display = "block";
+    startTyping('naslovPredavac', 100)
+    startTyping('tekstPredavac', 20)
+  }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-  clicked = true;
+  btn2.onclick = function () {
+    modal2.style.display = "block";
+    startTyping('naslovPredavac2', 100)
+    startTyping('tekstPredavac2', 20)
 
-}
+  }
 
-span2.onclick = function() {
-  modal2.style.display = "none";
-  clicked = true;
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
     modal.style.display = "none";
+    clicked = true;
+
   }
 
-  if (event.target == modal2) {
+  span2.onclick = function () {
     modal2.style.display = "none";
+    clicked = true;
   }
 
-}
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+
+    if (event.target == modal2) {
+      modal2.style.display = "none";
+    }
+
+  }
 
 
 
@@ -204,28 +226,28 @@ window.onclick = function(event) {
   $('.swiper-generalni').hover(function () {
 
     generalni.autoplay.stop();
-    
+
   }, function () {
     generalni.autoplay.start();
   }
   );
   $('.swiper-naturalni').hover(function () {
     naturalni.autoplay.stop();
-    
+
   }, function () {
     naturalni.autoplay.start();
   }
   );
   $('.swiper-medijski').hover(function () {
     medijski.autoplay.stop();
-    
+
   }, function () {
     medijski.autoplay.start();
   }
   );
   $('.swiper-panel').hover(function () {
     panel.autoplay.stop();
-    
+
   }, function () {
     panel.autoplay.start();
   }
@@ -351,6 +373,10 @@ window.onclick = function(event) {
   })
 
   function toggleNavigation() {
+    console.log($('.navbar-active').css('display'))
+    $('.navbar-active').css('display') == 'none' ?
+      $('.navbar-active').css('display', 'block') :
+      $('.navbar-active').css('display', 'none');
     swiper.allowTouchMove = !swiper.allowTouchMove
     swiper.mousewheel.enabled ? swiper.mousewheel.disable() : swiper.mousewheel.enable();
     swiper.keyboard.enabled ? swiper.keyboard.disable() : swiper.keyboard.enable();
@@ -438,7 +464,7 @@ window.onclick = function(event) {
 
   const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
   const firstAccordionItemBodies = document.querySelectorAll(".accordion-item-body");
-  
+
 
   accordionItemHeaders.forEach(accordionItemHeader => {
     accordionItemHeader.addEventListener("click", event => {
@@ -461,17 +487,17 @@ window.onclick = function(event) {
     });
   });
 
-  document.addEventListener('dblclick', function(e){
+  document.addEventListener('dblclick', function (e) {
     e.preventDefault();
     e.stopImmediatePropagation();
   })
 
-  
+
   function startTyping(textId, speed) {
     setTimeout(addNextLetterToTextBox, speed);
-    let text = $('#'+textId).html().replace(/\s+/g, ' ').trim();
+    let text = $('#' + textId).html().replace(/\s+/g, ' ').trim();
     var i = 0;
-    $('#'+textId).text("");
+    $('#' + textId).text("");
 
     function addNextLetterToTextBox() {
 
@@ -479,14 +505,39 @@ window.onclick = function(event) {
 
       if (!clicked && i < text.length) {
 
-        $('#'+textId).append(text[i]);
+        $('#' + textId).append(text[i]);
         i += 1;
         setTimeout(addNextLetterToTextBox, speed);
       }
       if (clicked) {
-        $('#'+textId).html(text);
+        $('#' + textId).html(text);
       }
       clicked = false;
     }
+  }
+
+  var slideIndex = 0;
+  showSlideForR2();
+
+  function showSlideForR2() {
+    var i;
+    var slide1 = $('.cardR21')
+    var slide2 = $('.cardR22')
+    console.log(window.innerWidth)
+    if (window.innerWidth < 800) {
+      slide1.hide();
+      slide2.hide();
+
+    } else {
+      if (slide1.css('display') == 'none') {
+        slide1.fadeIn(3000);
+        slide2.hide();
+      }else if(slide2.css('display') == 'none') {
+        slide2.fadeIn(3000);
+        slide1.hide();
+      }else {
+      }
+    }
+    setTimeout(showSlideForR2, 6000);
   }
 })()
