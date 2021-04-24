@@ -7,7 +7,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+p{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.8);
+  grid-area: txt;
+}
 /*  */
 html,
 body {
@@ -326,18 +333,16 @@ img {
 }
 .panelDiskusija {
   height: fit-content;
-  display: grid;
+ 
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid #ffffff;
   box-sizing: border-box;
   backdrop-filter: blur(74px);
   border-radius: 15px;
   padding: 2%;
-  display: grid;
-  grid-template-areas: "h2 txt txt txt txt txt txt txt txt txt txt txt txt txt txt txt txt";
+ 
   grid-gap: 0%;
   margin-bottom: 2%;
-  padding-bottom: 100px;
 }
 #titlePanel {
   font-family: Roboto;
@@ -349,32 +354,35 @@ img {
   text-align: center;
   word-break: normal;
   grid-area: h2;
+  line-height: 100px;
   text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
-    -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+  -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
 }
 #textPanel {
   font-family: Roboto;
   font-style: normal;
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: justify;
   color: rgba(255, 255, 255, 0.8);
   grid-area: txt;
+  padding: 0 25px;
+
 }
 
 #btnPanel {
-  height: 50px;
-  width: 100px;
-  background-color: transparent;
-  border: 2px solid white;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  margin: 10px;
-  right: 5px;
-  bottom: 1px;
+    /* height: 50px; */
+    /* width: 100px; */
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+    /* right: 5px; */
+    /* bottom: 1px; */
+    margin: 32.785px auto 26.785px auto;
 }
 
 #panelDiskusijaPopup {
@@ -493,17 +501,15 @@ img {
 }
 
 .speedDating {
-  height: 10vh;
-  display: grid;
+  height: fit-content;
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid #ffffff;
   box-sizing: border-box;
   backdrop-filter: blur(74px);
   border-radius: 15px;
   padding: 2%;
-  display: grid;
-  grid-template-areas: "txt txt txt txt h2";
-  grid-gap: 2%;
+  grid-gap: 0%;
+  margin-bottom: 2%;
 }
 #titleSpeed {
   font-family: Roboto;
@@ -516,15 +522,19 @@ img {
   grid-area: h2;
   text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
     -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+  line-height: 100px;
+
 }
 #textSpeed {
   font-family: Roboto;
   font-style: normal;
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: justify;
   color: rgba(255, 255, 255, 0.8);
   grid-area: txt;
+  padding: 0 25px;
+  margin-bottom: 4%;
 }
 /*--------------------------------------------------------------------------------------------------*/
 
@@ -546,7 +556,8 @@ img {
   color: #14191c;
   text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
     -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  padding-top: 5%;
 }
 
 .agenda-container {
@@ -554,16 +565,17 @@ img {
   margin: auto;
 }
 .carousel {
-  /* Note: backdrop-filter has minimal browser support */
   backdrop-filter: blur(35px);
   border: 1px solid #ffffff;
   border-radius: 15px;
-  height: 500px;
+  /* height: 500px; */
   overflow: hidden;
   position: relative;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 5% auto;
+  width: 50%;
 }
 .slider {
   display: flex;
@@ -673,6 +685,9 @@ img {
 }
 
 @media (max-width: 767.98px) {
+  .swiper-pagination{
+    display: none;
+  }
   .slider section ul li h4 {
     font-size: 1.1rem;
   }
@@ -705,7 +720,11 @@ img {
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
-  font-size: 5rem;
+  font-size: 4rem;
+  line-height: 94px;
+  text-align: center;
+
+  padding-top: 5%;
   line-height: 94px;
   /* identical to box height */
   text-align: center;
@@ -763,6 +782,24 @@ img {
   border-image: linear-gradient(to right, transparent, #fff, transparent) 1;
   font-family: Roboto;
   font-weight: 300;
+}
+.accordion-item-body-content a{
+color: #14191c;
+}
+.prvi-dan{
+  padding: 20px 0;
+}
+.drugi-dan{
+  padding: 20px 0;
+}
+.treci-dan{
+  padding: 20px 0;
+}
+.cetvrti-dan{
+  padding: 20px 0;
+}
+.peti-dan{
+  padding: 20px 0;
 }
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -828,6 +865,14 @@ img {
   #generalni-pokrovitelj .levi9 img {
     width: 200px;
     height: 100px;
+  }
+  .agenda-container{
+    width: 90% !important;
+  }
+
+  .carousel{
+    width: 100% !important;
+    margin: auto;
   }
 }
 
@@ -988,6 +1033,20 @@ img {
   #tim-i-footer #team .swiper-container {
     transform: translateY(-1rem);
   }
+  .agenda-container{
+    margin: auto;
+    width: 90% !important;
+  }
+  .carousel{
+    width: 100% !important;
+    margin-top: 12% !important;
+  }
+  .arrow.left{
+    left: 30px
+  }
+  .arrow.right{
+    right: 30px;
+  }
 }
 @media (max-width: 575.98px) {
   #partneri h2 {
@@ -1059,13 +1118,33 @@ img {
   background-color: #14191c;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 #footer-logo {
-  margin-top: 1.5rem;
-  margin-left: 2.5rem;
+     /* position: fixed; */
+    /* bottom: 3rem; */
+    /* right: 0; */
+    /* width: 27%; */
+    /* height: 4rem; */
+    display: flex;
+    align-items: center;
+    justify-content: space;
   width: 50%;
+}
+
+.agenda-container{
+  margin: auto;
+  width: 90% !important;
+}
+.carousel{
+  width: 50% ;
+}
+.arrow.left{
+  left: 30px
+}
+.arrow.right{
+  right: 30px;
 }
 
 @media (max-width: 575.98px) {
@@ -1135,9 +1214,9 @@ img {
     margin-top: 20%;
     border-radius: 5px;
     grid-area: img;
+    
   }
   .cardR21{
-    display: none;
   }
   #btn1R1,
   #btn1R2 {
@@ -1150,7 +1229,18 @@ img {
     text-align: center;
   }
 }
+@media (max-width: 1000px) {
+  .cardR1,
+  .cardR21,
+  .cardR22 {
+    display: none;
+  }
+}
 @media (max-width: 750px) {
+
+  p{
+    font-size: 1rem;
+  }
   #titleR1,
   #titleR2 {
     font-size: 2.5rem;
@@ -1206,17 +1296,14 @@ img {
 
   #textSpeed,
   #textPanel {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   #datingAndPanel {
     padding-left: 2%;
     padding-right: 2%;
     width: 100%;
   }
-  .panelDiskusija,
-  .speedDating {
-    height: 40vh;
-  }
+  
   .panelDiskusija {
     margin-top: 20%;
     grid-template-areas: "h2" "txt";
@@ -1235,21 +1322,26 @@ img {
   }
 }
 @media (max-width: 560px) {
+
+  .agenda-container{
+    margin: auto;
+    width: 90% !important;
+  }
+  .carousel{
+    width: 100% !important;
+  }
+
   #textSpeed {
     font-size: 0.9rem !important;
     margin-bottom: 10% !important;
   }
-  #textPanel {
-    font-size: 0.9rem !important;
-  }
+
 
   .speedDating {
-    height: 200px !important;
+    height: fit-content;
     margin-top: 5%;
   }
-  .panelDiskusija {
-    height: 320px !important;
-  }
+ 
   #btnPanel {
     width: 40%;
     font-size: 1rem;
@@ -1302,6 +1394,7 @@ img {
   #titlePanel {
     font-size: 1.5rem;
     padding-top: 0%;
+    line-height: 60px;
   }
   .cardR1,
   .cardR22,
@@ -1309,19 +1402,12 @@ img {
     display: none;
   }
 
-  #textSpeed,
-  #textPanel {
-    font-size: 0.8rem;
-  }
   #datingAndPanel {
     padding-left: 2%;
     padding-right: 2%;
     width: 100%;
   }
-  .panelDiskusija,
-  .speedDating {
-    height: 40vh;
-  }
+
   .panelDiskusija {
     margin-top: 20%;
     grid-template-areas: "h2" "txt";
@@ -1404,13 +1490,9 @@ img {
     padding-right: 2%;
     width: 100%;
   }
-  .panelDiskusija,
-  .speedDating {
-    height: 40vh;
-  }
+
   .panelDiskusija {
     margin-top: 20%;
-    grid-template-areas: "h2" "txt";
   }
   #btn1R1,
   #btn1R2 {
@@ -1479,10 +1561,7 @@ img {
     padding-right: 2%;
     width: 100%;
   }
-  .panelDiskusija,
-  .speedDating {
-    height: 40vh;
-  }
+
   .panelDiskusija {
     margin-top: 20%;
     grid-template-areas: "h2" "txt";
@@ -1492,13 +1571,8 @@ img {
     display: flex;
     justify-content: space-around;
   }
-  #textPanel,
-  #textSpeed {
-    font-size: 0.8rem !important;
-  }
-  .panelDiskusija {
-    height: 290px !important;
-  }
+
+
   #btn1R1,
   #btn1R2 {
     height: 60%;
@@ -1722,6 +1796,17 @@ ul {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+.navbar-active-social-media2.footer {
+  position: fixed;
+  /* bottom: 3rem; */
+  /* right: 0; */
+  /* width: 27%; */
+  width: auto;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-start; */
 }
 
 .navbar-active-social-media a,
