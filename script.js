@@ -85,15 +85,15 @@
 
   // When the user clicks on the button, open the modal
   btn.onclick = function () {
-    modal.style.display = "block";
-    startTyping('naslovPredavac', 100)
-    startTyping('tekstPredavac', 20)
+    modal.style.display = "flex";
+    // startTyping('naslovPredavac', 100)
+    // startTyping('tekstPredavac', 20)
   }
 
   btn2.onclick = function () {
-    modal2.style.display = "block";
-    startTyping('naslovPredavac2', 100)
-    startTyping('tekstPredavac2', 20)
+    modal2.style.display = "flex";
+    // startTyping('naslovPredavac2', 100)
+    // startTyping('tekstPredavac2', 20)
 
   }
 
@@ -493,7 +493,7 @@
   })
 
 
-  function startTyping(textId, speed) {
+ /* function startTyping(textId, speed) {
     setTimeout(addNextLetterToTextBox, speed);
     let text = $('#' + textId).html().replace(/\s+/g, ' ').trim();
     var i = 0;
@@ -514,7 +514,7 @@
       }
       clicked = false;
     }
-  }
+  }*/
 
   var slideIndex = 0;
   showSlideForR2();
