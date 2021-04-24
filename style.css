@@ -9,7 +9,7 @@
   -webkit-tap-highlight-color: transparent;
   outline: none;
 }
-p{
+p {
   font-family: Roboto;
   font-style: normal;
   font-weight: 300;
@@ -31,8 +31,8 @@ body {
   margin-right: auto;
 }
 
-.navbar-active{
-  display:none;
+.navbar-active {
+  display: none;
 }
 
 .main-container > .swiper-wrapper > .swiper-slide {
@@ -57,7 +57,7 @@ body {
 }
 /*--------------------------------Radionica1------------------------------------------------*/
 .containerR1 {
-  min-height: 80vh;
+  min-height: 82vh;
   position: absolute;
   left: 10%;
   top: 15%;
@@ -66,7 +66,7 @@ body {
   width: 80%;
   display: grid;
   grid-template-areas: "h2 h2 h2" "img txt txt" "empty btn btn";
-  grid-gap: 2%;
+  grid-gap: 0%;
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid #ffffff;
   box-sizing: border-box;
@@ -100,9 +100,9 @@ body {
     -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
 }
 .cardR1,
- .cardR22,
- .cardR21 {
-   margin-top: 20%;
+.cardR22,
+.cardR21 {
+  margin-top: 20%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 70%;
@@ -112,7 +112,7 @@ body {
   grid-area: img;
 }
 
-.cardR21{
+.cardR21 {
   display: none;
 }
 
@@ -126,7 +126,8 @@ img {
 .cardContainerR1 {
   padding: 2px 16px;
 }
-#textR1, #textR2 {
+#textR1,
+#textR2 {
   font-family: Roboto;
   font-style: normal;
   font-weight: 300;
@@ -135,7 +136,7 @@ img {
   color: rgba(255, 255, 255, 0.8);
   grid-area: txt;
   margin-right: 6%;
-  margin-top: 10%;
+  margin-top: 6%;
   padding-top: 5%;
 }
 .buttonsR1 {
@@ -192,7 +193,6 @@ img {
   border-radius: 15px;
   align-items: center;
   justify-content: center;
-
 }
 
 /* Modal Content/Box */
@@ -246,7 +246,7 @@ img {
 }
 
 .containerR2 {
-  min-height: 80vh;
+  min-height: 82vh;
   position: absolute;
   left: 10%;
   top: 10%;
@@ -309,7 +309,6 @@ img {
   justify-content: center;
   grid-area: btn;
   justify-content: space-around;
-  
 }
 #btn1R2 {
   height: 60%;
@@ -334,14 +333,14 @@ img {
 }
 .panelDiskusija {
   height: fit-content;
- 
+
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid #ffffff;
   box-sizing: border-box;
   backdrop-filter: blur(74px);
   border-radius: 15px;
   padding: 1%;
- 
+
   grid-gap: 0%;
   margin-bottom: 1%;
 }
@@ -356,7 +355,7 @@ img {
   grid-area: h2;
   line-height: 100px;
   text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
-  -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
+    -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
 }
 #textPanel {
   font-family: Roboto;
@@ -367,17 +366,16 @@ img {
   color: rgba(255, 255, 255, 0.8);
   grid-area: txt;
   padding: 0 25px;
-
 }
 
 #btnPanel {
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.5rem auto 0.5rem auto;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem auto 0.5rem auto;
 }
 
 #popUpPanel {
@@ -514,7 +512,6 @@ img {
   text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
     -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
   line-height: 50px;
-
 }
 #textSpeed {
   font-family: Roboto;
@@ -676,7 +673,7 @@ img {
 }
 
 @media (max-width: 767.98px) {
-  .swiper-pagination{
+  .swiper-pagination {
     display: none;
   }
   .slider section ul li h4 {
@@ -774,22 +771,22 @@ img {
   font-family: Roboto;
   font-weight: 300;
 }
-.accordion-item-body-content a{
-color: #14191c;
+.accordion-item-body-content a {
+  color: #14191c;
 }
-.prvi-dan{
+.prvi-dan {
   padding: 20px 0;
 }
-.drugi-dan{
+.drugi-dan {
   padding: 20px 0;
 }
-.treci-dan{
+.treci-dan {
   padding: 20px 0;
 }
-.cetvrti-dan{
+.cetvrti-dan {
   padding: 20px 0;
 }
-.peti-dan{
+.peti-dan {
   padding: 20px 0;
 }
 
@@ -859,11 +856,11 @@ color: #14191c;
     width: 200px;
     height: 100px;
   }
-  .agenda-container{
+  .agenda-container {
     width: 90% !important;
   }
 
-  .carousel{
+  .carousel {
     width: 100% !important;
     margin: auto;
   }
@@ -1026,18 +1023,18 @@ color: #14191c;
   #tim-i-footer #team .swiper-container {
     transform: translateY(-1rem);
   }
-  .agenda-container{
+  .agenda-container {
     margin: auto;
     width: 90% !important;
   }
-  .carousel{
+  .carousel {
     width: 100% !important;
     margin-top: 12% !important;
   }
-  .arrow.left{
-    left: 30px
+  .arrow.left {
+    left: 30px;
   }
-  .arrow.right{
+  .arrow.right {
     right: 30px;
   }
 }
@@ -1115,28 +1112,28 @@ color: #14191c;
 }
 
 #footer-logo {
-     /* position: fixed; */
-    /* bottom: 3rem; */
-    /* right: 0; */
-    /* width: 27%; */
-    /* height: 4rem; */
-    display: flex;
-    align-items: center;
-    justify-content: space;
+  /* position: fixed; */
+  /* bottom: 3rem; */
+  /* right: 0; */
+  /* width: 27%; */
+  /* height: 4rem; */
+  display: flex;
+  align-items: center;
+  justify-content: space;
   width: 50%;
 }
 
-.agenda-container{
+.agenda-container {
   margin: auto;
   width: 90% !important;
 }
-.carousel{
-  width: 50% ;
+.carousel {
+  width: 50%;
 }
-.arrow.left{
-  left: 30px
+.arrow.left {
+  left: 30px;
 }
-.arrow.right{
+.arrow.right {
   right: 30px;
 }
 
@@ -1207,9 +1204,6 @@ color: #14191c;
     margin-top: 20%;
     border-radius: 5px;
     grid-area: img;
-    
-  }
-  .cardR21{
   }
   #btn1R1,
   #btn1R2 {
@@ -1230,8 +1224,7 @@ color: #14191c;
   }
 }
 @media (max-width: 750px) {
-
-  p{
+  p {
     font-size: 1rem;
   }
   #titleR1,
@@ -1296,7 +1289,7 @@ color: #14191c;
     padding-right: 2%;
     width: 100%;
   }
-  
+
   .panelDiskusija {
     grid-template-areas: "h2" "txt";
   }
@@ -1314,12 +1307,11 @@ color: #14191c;
   }
 }
 @media (max-width: 560px) {
-
-  .agenda-container{
+  .agenda-container {
     margin: auto;
     width: 90% !important;
   }
-  .carousel{
+  .carousel {
     width: 100% !important;
   }
 
@@ -1328,12 +1320,11 @@ color: #14191c;
     margin-bottom: 3% !important;
   }
 
-
   .speedDating {
     height: fit-content;
     margin-top: 1%;
   }
- 
+
   #btnPanel {
     width: 40%;
     font-size: 1rem;
@@ -1562,7 +1553,6 @@ color: #14191c;
     display: flex;
     justify-content: space-around;
   }
-
 
   #btn1R1,
   #btn1R2 {
@@ -2170,7 +2160,7 @@ button:hover {
   min-width: 28rem;
   left: 45%;
   bottom: 5rem;
-  
+
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid #fff;
   -webkit-backdrop-filter: blur(24px);
@@ -2214,7 +2204,6 @@ button:hover {
     top: 2%;
     min-width: 0 !important;
   }
-
 }
 
 @media (max-width: 700.98px) {
@@ -2223,7 +2212,6 @@ button:hover {
     transform: translateX(-50%);
     padding: 1rem;
   }
-
 
   .o-projektu-wrapper .text p {
     font-size: 1.1rem;
