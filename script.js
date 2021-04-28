@@ -57,18 +57,18 @@
     // Get the modal
     var modal = document.getElementById("popUpRadionica");
     var modal2 = document.getElementById("popUpRadionica2");
-    var modal3 = document.getElementById("popUpPanel");
+    //var modal3 = document.getElementById("popUpPanel");
 
     // Get the button that opens the modal
     var btn = document.getElementById("btn1R1");
     var btn2 = document.getElementById("btn1R2");
-    var btn3 = document.getElementById("btnPanel");
+    //var btn3 = document.getElementById("btnPanel");
 
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close1")[0];
     var span2 = document.getElementsByClassName("close2")[0];
-    var span3 = document.getElementsByClassName("close3")[0];
+    //var span3 = document.getElementsByClassName("close3")[0];
 
 
     // When the user clicks on the button, open the modal
@@ -84,58 +84,58 @@
         // startTyping('tekstPredavac2', 20)
 
     }
-
-    btn3.onclick = function() {
-            modal3.style.display = "flex";
-            if (!panel) {
-                panel = new Swiper('.swiper-panel', {
-                    speed: 2000,
-                    spaceBetween: 50,
-                    initialSlide: 2,
-                    autoHeight: false,
-                    direction: 'horizontal',
-                    loop: true,
-                    autoplay: {
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    },
-                    loop: true,
-                    loopedSlides: 0,
-                    simulateTouch: false,
-                    allowSwipeToNext: false,
-                    effect: 'slide',
-                    slidesPerView: 'auto',
-                })
-                $('#panelista' + panel.activeIndex).fadeIn();
-
-            }
-            if (panel)
-                panel.on('transitionEnd', function() {
-                    if (window.innerWidth > 900) {
-
-
-                        for (let index = 5; index <= 8; index++) {
-                            if (panel.activeIndex === 4) {
-                                if (index !== 8) {
-                                    $('#panelista' + index).hide();
-
-                                }
-                            } else {
-                                $('#panelista' + index).hide();
-
-                            }
-                        }
-                        if (panel.activeIndex === 5) {
-                            $('#panelista8').hide();
-                        }
-                        console.log(panel.activeIndex)
-                        if (panel.activeIndex !== 4) {
-                            $('#panelista' + panel.activeIndex).fadeIn(1750);
-                        }
-                    }
-                });
-        }
-        //
+//
+    //btn3.onclick = function() {
+    //        modal3.style.display = "flex";
+    //        if (!panel) {
+    //            panel = new Swiper('.swiper-panel', {
+    //                speed: 2000,
+    //                spaceBetween: 50,
+    //                initialSlide: 2,
+    //                autoHeight: false,
+    //                direction: 'horizontal',
+    //                loop: true,
+    //                autoplay: {
+    //                    delay: 5000,
+    //                    disableOnInteraction: false,
+    //                },
+    //                loop: true,
+    //                loopedSlides: 0,
+    //                simulateTouch: false,
+    //                allowSwipeToNext: false,
+    //                effect: 'slide',
+    //                slidesPerView: 'auto',
+    //            })
+    //            $('#panelista' + panel.activeIndex).fadeIn();
+//
+    //        }
+    //        if (panel)
+    //            panel.on('transitionEnd', function() {
+    //                if (window.innerWidth > 900) {
+//
+//
+    //                    for (let index = 5; index <= 8; index++) {
+    //                        if (panel.activeIndex === 4) {
+    //                            if (index !== 8) {
+    //                                $('#panelista' + index).hide();
+//
+    //                            }
+    //                        } else {
+    //                            $('#panelista' + index).hide();
+//
+    //                        }
+    //                    }
+    //                    if (panel.activeIndex === 5) {
+    //                        $('#panelista8').hide();
+    //                    }
+    //                    console.log(panel.activeIndex)
+    //                    if (panel.activeIndex !== 4) {
+    //                        $('#panelista' + panel.activeIndex).fadeIn(1750);
+    //                    }
+    //                }
+    //            });
+    //    }
+    //    //
         // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         modal.style.display = "none";
@@ -148,10 +148,10 @@
         clicked = true;
     }
 
-    span3.onclick = function() {
-        modal3.style.display = "none";
-        clicked = true;
-    }
+ //   span3.onclick = function() {
+ //       modal3.style.display = "none";
+ //       clicked = true;
+ //   }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
@@ -163,9 +163,9 @@
             modal2.style.display = "none";
         }
 
-        if (event.target == modal3) {
-            modal3.style.display = "none";
-        }
+    //    if (event.target == modal3) {
+    //        modal3.style.display = "none";
+    //    }
 
     }
 

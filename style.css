@@ -724,6 +724,7 @@ img {
   margin: 0;
   padding: 0;
   transform: translate(-50%);
+  margin-bottom: 1rem;
 }
 
 .control ul li {
@@ -759,6 +760,11 @@ img {
   .slider section ul li p {
     font-size: 0.9rem;
   }
+  .control ul li {
+    width: 7px !important;
+    height: 7px !important;
+  }
+
 }
 /*------------------------------------------KRAJ AGENDA--------------------------------------------*/
 /*----------------------------------------------FAQ---------------------------------------------------*/
@@ -911,7 +917,7 @@ body {
 }
 
 #subtitleR1 {
-  margin-top: 1%;
+  /*margin-top: 1%;*/
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -983,6 +989,7 @@ img {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 0.5rem;
 }
 
 #popUpRadionica {
@@ -1582,7 +1589,7 @@ img {
 .accordion {
   width: 90%;
   max-width: 1000px;
-  margin: 4rem auto;
+  margin: 0.5rem auto;
 }
 
 .accordion-item {
@@ -2177,6 +2184,18 @@ img {
   }
 }
 
+@media (max-height: 680px) {
+  #textR1, #textR2 {
+    font-size: 1.3rem;
+  }
+
+
+
+
+
+  
+}
+
 @media (max-width: 560px) {
   .agenda-container {
     margin: auto;
@@ -2210,7 +2229,7 @@ img {
     right: 3%;
     width: 94%;
     grid-template-areas: 'h2' 'txt' 'txt' 'btn btn' !important;
-    height: 82vh;
+    height: 84vh;
   }
   #subtitleR1 {
     font-size: 1.5rem;
