@@ -605,7 +605,6 @@ img {
   color: #14191c;
   text-shadow: 8px -8px 10px rgba(255, 255, 255, 0.07),
     -30px 30px 30px rgba(0, 0, 0, 0.2), -10px 10px 10px rgba(0, 0, 0, 0.35);
-  margin-bottom: 40px;
   padding-top: 5%;
 }
 
@@ -3199,6 +3198,42 @@ button:hover {
 
 .peti-dan {
   padding: 20px 0;
+}
+
+@media (max-width: 320px) {
+  .o-projektu-wrapper .text p {
+    font-size: 0.8rem;
+  }
+
+  #datingAndPanel .speedDating #textSpeed p {
+    font-size: 0.77rem;
+  }
+
+  #faq .accordion .accordion-item {
+    margin: 0.25rem auto;
+  }
+
+  #faq .accordion .accordion-item .accordion-item-header, #faq .accordion .accordion-item .accordion-item-body-content  {
+    font-size: 0.75rem;
+    padding: 0.25rem;
+    
+  }
+
+  #generalni-pokrovitelj .levi9 {
+    margin-bottom: 0.5rem;
+  }
+
+  #generalni-pokrovitelj .levi9-container {
+    margin-top: 0;
+  }
+
+  #generalni-pokrovitelj .levi9-container p{
+    font-size: 0.88rem;;
+  }
+
+
+
+
 }
 /*----------------------------------------------------------------------------------------------------*/
 /*---------------------------------GENERALNI POKROVITELJ----------------------------------------------*/
