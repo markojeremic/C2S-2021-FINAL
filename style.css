@@ -463,16 +463,31 @@ img {
 }
 
 .panelistiTekst {
-  width: 50%;
   padding-right: 10%;
   font-size: 1.25rem;
-  display: none;
+  width: 60%;
+  text-align: justify;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
 .swiper-panel {
   position: relative;
   overflow: hidden;
-  width: 312px;
+  width: 1000px;
   height: 378px !important;
   margin-bottom: 2.3%;
   display: block;
@@ -482,21 +497,21 @@ img {
   .panel-content {
     width: 100% !important;
   }
-  .swiper-panel .swiper-slide {
+  /* .swiper-panel .swiper-slide {
     width: 100px !important;
     height: 200px;
   }
   .swiper-panel .swiper-slide .team-card {
     background: none !important;
     padding-bottom: 10px;
-    /* width: 100%; */
+    
     min-height: 100% !important;
     width: 100%;
   }
   .swiper-panel .swiper-slide .team-card .team-card-img {
     height: 100% !important;
     width: 90% i !important;
-  }
+  } */
 }
 
 .swiper-panel .swiper-wrapper {
@@ -504,13 +519,6 @@ img {
   width: 10000%;
 }
 
-.swiper-panel .swiper-slide {
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 312px !important;
-}
 
 .swiper-panel .swiper-slide .team-card {
   height: 100%;
@@ -518,6 +526,7 @@ img {
   padding-top: 5px;
   box-sizing: border-box;
   backdrop-filter: blur(74px);
+  width: auto;
 }
 
 .swiper-panel .swiper-slide .team-card .team-card-img {
@@ -1255,6 +1264,7 @@ img {
   border-radius: 15px;
   align-items: center;
   justify-content: center;
+  transform: translateY(400vh);
 }
 
 .panel-content {
@@ -1272,14 +1282,12 @@ img {
 .swiper-panel {
   position: relative;
   overflow: hidden;
-  width: 312px;
   height: 378px !important;
-  margin: auto;
   margin-bottom: 2.3%;
-  display: none;
+  width: 100%;
 }
 
-@media (max-width: 420px) {
+/* @media (max-width: 420px) {
   .swiper-panel {
     height: 200px !important;
     width: 300px;
@@ -1295,20 +1303,21 @@ img {
     width: 100% !important;
     height: 50px !important;
   }
-}
+} */
 
 .swiper-panel .swiper-wrapper {
   position: relative;
-  width: 10000%;
 }
 
 .swiper-panel .swiper-slide {
   position: relative;
+  display: flex;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 312px !important;
+  justify-content: space-between;
 }
+
 
 .swiper-panel .swiper-slide .team-card {
   height: 100%;
@@ -1318,6 +1327,7 @@ img {
   box-sizing: border-box;
   backdrop-filter: blur(74px);
   border-radius: 15px;
+  width: 312px;
 }
 
 .swiper-panel .swiper-slide .team-card .team-card-img {
@@ -1327,7 +1337,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 292px !important;
+  width: 90% !important;
   height: 261px !important;
 }
 
@@ -2994,9 +3004,6 @@ button:hover {
   .title h1 {
     font-size: 3rem;
   }
-  .panelistiTekst {
-    display: none !important;
-  }
   .panel-content {
     width: 74%;
   }
@@ -4625,6 +4632,16 @@ button:hover {
   margin-bottom: 0.7rem;
 }
 
+@media (max-width: 1100.98px) {
+  .panelistiTekst {
+    display: none !important;
+  }
+
+  .swiper-panel .swiper-slide{
+    justify-content: center;
+  }
+}
+
 @media (max-width: 991.98px) {
   .o-projektu-wrapper {
     width: 96% !important;
@@ -4665,5 +4682,17 @@ button:hover {
   }
   .o-projektu-wrapper .title h2 {
     font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .panel-content{
+    
+    position: absolute;
+    bottom: 1%;
+  }
+
+  .close3 {
+    font-size: 40px;
   }
 }

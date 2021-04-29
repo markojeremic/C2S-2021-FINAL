@@ -57,115 +57,123 @@
     // Get the modal
     var modal = document.getElementById("popUpRadionica");
     var modal2 = document.getElementById("popUpRadionica2");
-    //var modal3 = document.getElementById("popUpPanel");
+    var modal3 = document.getElementById("popUpPanel");
 
     // Get the button that opens the modal
     var btn = document.getElementById("btn1R1");
     var btn2 = document.getElementById("btn1R2");
-    //var btn3 = document.getElementById("btnPanel");
+    // var btn3 = document.getElementById("btnPanel");
 
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close1")[0];
     var span2 = document.getElementsByClassName("close2")[0];
-    //var span3 = document.getElementsByClassName("close3")[0];
+    var span3 = document.getElementsByClassName("close3")[0];
 
 
     // When the user clicks on the button, open the modal
-    btn.onclick = function() {
+    btn.onclick = function () {
         modal.style.display = "flex";
         // startTyping('naslovPredavac', 100)
         // startTyping('tekstPredavac', 20)
     }
 
-    btn2.onclick = function() {
+    btn2.onclick = function () {
         modal2.style.display = "flex";
         // startTyping('naslovPredavac2', 100)
         // startTyping('tekstPredavac2', 20)
 
     }
-//
-    //btn3.onclick = function() {
-    //        modal3.style.display = "flex";
-    //        if (!panel) {
-    //            panel = new Swiper('.swiper-panel', {
-    //                speed: 2000,
-    //                spaceBetween: 50,
-    //                initialSlide: 2,
-    //                autoHeight: false,
-    //                direction: 'horizontal',
-    //                loop: true,
-    //                autoplay: {
-    //                    delay: 5000,
-    //                    disableOnInteraction: false,
-    //                },
-    //                loop: true,
-    //                loopedSlides: 0,
-    //                simulateTouch: false,
-    //                allowSwipeToNext: false,
-    //                effect: 'slide',
-    //                slidesPerView: 'auto',
-    //            })
-    //            $('#panelista' + panel.activeIndex).fadeIn();
-//
-    //        }
-    //        if (panel)
-    //            panel.on('transitionEnd', function() {
-    //                if (window.innerWidth > 900) {
-//
-//
-    //                    for (let index = 5; index <= 8; index++) {
-    //                        if (panel.activeIndex === 4) {
-    //                            if (index !== 8) {
-    //                                $('#panelista' + index).hide();
-//
-    //                            }
-    //                        } else {
-    //                            $('#panelista' + index).hide();
-//
-    //                        }
-    //                    }
-    //                    if (panel.activeIndex === 5) {
-    //                        $('#panelista8').hide();
-    //                    }
-    //                    console.log(panel.activeIndex)
-    //                    if (panel.activeIndex !== 4) {
-    //                        $('#panelista' + panel.activeIndex).fadeIn(1750);
-    //                    }
-    //                }
-    //            });
-    //    }
-    //    //
-        // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
+    //
+
+    $('body').on('click', '#btn1R1', function (e) {
+        $('#popUpRadionica').css('display', 'flex');
+        $('.navbar').hide();
+        toggleNavigation();
+    });
+
+    $('body').on('click', '#btn1R2', function (e) {
+        $('#popUpRadionica2').css('display', 'flex');
+        $('.navbar').hide();
+        toggleNavigation();
+    });
+
+    $('body').on('click', '#btnPanel', function (e) {
+        e.preventDefault();
+
+        $('#popUpPanel').css('display', 'flex');
+        $('.navbar').hide();
+        toggleNavigation();
+
+        panel = new Swiper('.swiper-panel', {
+            speed: 2000,
+            spaceBetween: 50,
+            initialSlide: 2,
+            autoHeight: false,
+            direction: 'horizontal',
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            loopedSlides: 4,
+            simulateTouch: false,
+            allowSwipeToNext: false,
+            effect: 'slide',
+            slidesPerView: 1,
+        })
+    });
+  
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
         modal.style.display = "none";
         clicked = true;
 
     }
 
-    span2.onclick = function() {
+    span2.onclick = function () {
         modal2.style.display = "none";
         clicked = true;
     }
+    $('body').on('click', '.close1', function (e) {
+        $('#popUpRadionica').css('display', 'none');
+        $('.navbar').show();
+        toggleNavigation();
+    });
 
- //   span3.onclick = function() {
- //       modal3.style.display = "none";
- //       clicked = true;
- //   }
+    $('body').on('click', '.close2', function (e) {
+        $('#popUpRadionica2').css('display', 'none');
+        $('.navbar').show();
+        toggleNavigation();
+    });
+
+    $('body').on('click', '.close3', function (e) {
+        $('#popUpPanel').css('display', 'none');
+        $('.navbar').show();
+        toggleNavigation();
+    });
 
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+    window.onclick = function (event) {
+      
+
+        if (event.target.id == 'popUpRadionica') {
+            $('#popUpRadionica').css('display', 'none');
+            $('.navbar').show();
+            toggleNavigation();
         }
 
-        if (event.target == modal2) {
-            modal2.style.display = "none";
+        if (event.target.id == 'popUpRadionica2') {
+            $('#popUpRadionica2').css('display', 'none');
+            $('.navbar').show();
+            toggleNavigation();
         }
-
-    //    if (event.target == modal3) {
-    //        modal3.style.display = "none";
-    //    }
+        if (event.target.id == 'popUpPanel') {
+            $('#popUpPanel').css('display', 'none');
+            $('.navbar').show();
+            toggleNavigation();
+        }
 
     }
 
@@ -210,46 +218,46 @@
     // Caroussel generalni
 
     const generalni = new Swiper('.swiper-generalni', {
-            speed: 2000,
-            spaceBetween: 0,
-            initialSlide: 2,
-            autoHeight: false,
-            direction: 'horizontal',
-            loop: true,
-            autoplay: {
-                delay: 1,
-                disableOnInteraction: false,
-            },
-            loop: true,
-            loopedSlides: 50,
+        speed: 2000,
+        spaceBetween: 0,
+        initialSlide: 2,
+        autoHeight: false,
+        direction: 'horizontal',
+        loop: true,
+        autoplay: {
+            delay: 1,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        loopedSlides: 50,
 
-            effect: 'slide',
-            slidesPerView: 'auto',
-            centeredSlides: true,
-            grabCursor: true,
-        })
-        // Caroussel naturalni
+        effect: 'slide',
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        grabCursor: true,
+    })
+    // Caroussel naturalni
 
     const naturalni = new Swiper('.swiper-naturalni', {
-            speed: 1000,
-            spaceBetween: 0,
-            initialSlide: 3,
-            autoHeight: false,
-            direction: 'horizontal',
-            loop: true,
-            autoplay: {
-                delay: 1,
-                disableOnInteraction: false,
-            },
-            loop: true,
-            loopedSlides: 50,
+        speed: 1000,
+        spaceBetween: 0,
+        initialSlide: 3,
+        autoHeight: false,
+        direction: 'horizontal',
+        loop: true,
+        autoplay: {
+            delay: 1,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        loopedSlides: 50,
 
-            effect: 'slide',
-            slidesPerView: 2,
-            centeredSlides: true,
-            grabCursor: true,
-        })
-        // Caroussel medijski
+        effect: 'slide',
+        slidesPerView: 2,
+        centeredSlides: true,
+        grabCursor: true,
+    })
+    // Caroussel medijski
 
     const medijski = new Swiper('.swiper-medijski', {
         speed: 1500,
@@ -271,29 +279,29 @@
         grabCursor: true,
     })
 
-    $('.swiper-generalni').hover(function() {
+    $('.swiper-generalni').hover(function () {
 
         generalni.autoplay.stop();
 
-    }, function() {
+    }, function () {
         generalni.autoplay.start();
     });
-    $('.swiper-naturalni').hover(function() {
+    $('.swiper-naturalni').hover(function () {
         naturalni.autoplay.stop();
 
-    }, function() {
+    }, function () {
         naturalni.autoplay.start();
     });
-    $('.swiper-medijski').hover(function() {
+    $('.swiper-medijski').hover(function () {
         medijski.autoplay.stop();
 
-    }, function() {
+    }, function () {
         medijski.autoplay.start();
     });
-    $('.swiper-panel').hover(function() {
+    $('.swiper-panel').hover(function () {
         panel.autoplay.stop();
 
-    }, function() {
+    }, function () {
         panel.autoplay.start();
     });
 
@@ -301,14 +309,12 @@
     const mainContainer = document.querySelector('.main-container')
 
     hamburger_menu.addEventListener('click', () => {
-        console.log('eej')
         if ($('.main-container').hasClass('active')) navbarActive = false
         else navbarActive = true
         mainContainer.classList.toggle('active')
-        console.log(navbarActive)
     })
 
-    $('.hamburger-menu').click(function(e) {
+    $('.hamburger-menu').click(function (e) {
         e.preventDefault()
 
         const containerWrapper1 = document.querySelector('.container-wrapper')
@@ -402,17 +408,17 @@
         )
         toggleNavigation();
         if (!navbarActive && active) {
-            console.log(active);
+
             let currentlyActiveWrapper;
             let currentlyActiveSection;
             currentlyActiveWrapper = $('body').find('.should-change')
             currentlyActiveSection = currentlyActiveWrapper.find('.main')
             currentlyActiveSection.html(active)
+            
         }
     })
 
     function toggleNavigation() {
-        console.log($('.navbar-active').css('display'))
         $('.navbar-active').css('display') == 'none' ?
             $('.navbar-active').css('display', 'block') :
             $('.navbar-active').css('display', 'none');
@@ -428,7 +434,7 @@
         swiper.slideTo(numberPage, 0, false)
     }
 
-    $('.navbar-active-link').hover(function(e) {
+    $('.navbar-active-link').hover(function (e) {
         e.preventDefault()
 
         if (navbarActive) {
@@ -436,9 +442,9 @@
             const currentlyActiveSection = currentlyActiveWrapper.find('.main')
             if (!hasActive) {
                 active = currentlyActiveSection.html()
-                console.log(currentlyActiveSection.find('section').attr('id'))
+
                 activeID = currentlyActiveWrapper.find('section').attr('id')
-                console.log(active)
+
                 hasActive = true
             }
             const hoveredSectionID = $(this).attr('should-show')
@@ -449,7 +455,7 @@
         }
     })
 
-    $('.navbar-active-link').click(function(e) {
+    $('.navbar-active-link').click(function (e) {
         e.preventDefault()
         toggleNavigation();
         navbarActive = false
@@ -487,14 +493,14 @@
         })
     })
 
-    left.addEventListener('click', function() {
+    left.addEventListener('click', function () {
         index = index > 0 ? index - 1 : 0
         document.querySelector('.control .selected').classList.remove('selected')
         indicatorParent.children[index].classList.add('selected')
         slider.style.transform = 'translateX(' + index * -20 + '%)'
     })
 
-    right.addEventListener('click', function() {
+    right.addEventListener('click', function () {
         index = index < 5 - 1 ? index + 1 : 4
         document.querySelector('.control .selected').classList.remove('selected')
         indicatorParent.children[index].classList.add('selected')
@@ -525,10 +531,6 @@
         });
     });
 
-    document.addEventListener('dblclick', function(e) {
-        e.preventDefault();
-        e.stopImmediatePropagation();
-    })
 
 
     /* function startTyping(textId, speed) {
@@ -539,7 +541,7 @@
 
        function addNextLetterToTextBox() {
 
-         console.log(clicked)
+
 
          if (!clicked && i < text.length) {
 
@@ -562,7 +564,6 @@
         var i;
         var slide1 = $('.cardR21')
         var slide2 = $('.cardR22')
-        console.log(window.innerWidth)
         if (window.innerWidth < 800) {
             slide1.hide();
             slide2.hide();
@@ -574,7 +575,7 @@
             } else if (slide2.css('display') == 'none') {
                 slide2.fadeIn(3000);
                 slide1.hide();
-            } else {}
+            } else { }
         }
         setTimeout(showSlideForR2, 6000);
     }
